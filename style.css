@@ -1,0 +1,271 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-panel {
+    width: 40%;
+    background: #2c3e50;
+    color: white;
+    padding: 40px;
+}
+
+.left-panel .card-legend {
+    margin-top: 30px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.left-panel .card-legend h3 {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #aaa;
+}
+
+.legend-item {
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.legend-item.apl { background: #f39c12; color: #fff; }
+.legend-item.bpl { background: #e74c3c; color: #fff; }
+.legend-item.ant { background: #27ae60; color: #fff; }
+
+.right-panel {
+    width: 60%;
+    padding: 40px;
+}
+
+.form-box {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.form-box input,
+.form-box select {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 10px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.form-box button:hover { background: #1a252f; }
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar h2 { margin: 0 0 4px 0; font-size: 16px; }
+
+.sidebar button {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    background: #34495e;
+    color: white;
+}
+
+.sidebar button:hover { background: #1a252f; }
+.sidebar hr { border-color: #445; margin: 5px 0; }
+
+/* Sync button disabled state */
+#syncBtn:disabled {
+    background: #555;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    min-width: 90px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+
+.card p { margin: 0 0 4px 0; font-size: 12px; color: #888; }
+.card h2 { margin: 0; font-size: 24px; }
+
+.apl-card { border-top: 4px solid #f39c12; }
+.bpl-card { border-top: 4px solid #e74c3c; }
+.ant-card { border-top: 4px solid #27ae60; }
+
+.monthly-notice {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    color: #856404;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+.ration-info {
+    background: #eaf4fb;
+    border: 1px solid #3498db;
+    color: #1a5276;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+#customerForm {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+#customerForm input[type="text"],
+#customerForm input[type="number"],
+#customerForm select {
+    padding: 9px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    flex: 1 1 160px;
+}
+
+#customerForm label {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+#customerForm button[type="submit"] {
+    padding: 9px 24px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#customerForm button[type="submit"]:hover { background: #1a252f; }
+
+#searchInput, #filterCardType {
+    padding: 9px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+th, td {
+    padding: 10px 12px;
+    border: 1px solid #eee;
+    font-size: 13px;
+    text-align: left;
+}
+
+th {
+    background: #2c3e50;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) { background: #f9f9f9; }
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge-APL { background: #f39c12; }
+.badge-BPL { background: #e74c3c; }
+.badge-Antyodaya { background: #27ae60; }
+
+.sync-dot { font-size: 12px; }
+.sync-ok { color: green; }
+.sync-pending { color: orange; }
+
+td button {
+    padding: 4px 10px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+td button:hover { background: #c0392b; }

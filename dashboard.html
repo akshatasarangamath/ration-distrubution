@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<aside class="sidebar">
+  <h2>🍚 Ration Tracker</h2>
+  <p id="userInfo"></p>
+  <p id="networkStatus"> 🔴offline </p>
+  <button id="syncBtn">🔁 Sync</button>
+  <hr>
+  <p style="font-size:12px;color:#aaa;">Month: <strong id="currentMonth"></strong></p>
+  <button id="logoutBtn">Logout</button>
+</aside>
+
+<main class="main-content">
+
+  <h1>Dashboard</h1>
+
+  <section class="cards-section">
+    <div class="card"><p>Total</p><h2 id="totalCustomers">0</h2></div>
+    <div class="card"><p>Received</p><h2 id="receivedCount">0</h2></div>
+    <div class="card"><p>Pending</p><h2 id="pendingCount">0</h2></div>
+    <div class="card"><p>Offline</p><h2 id="offlineCount">0</h2></div>
+    <div class="card apl-card"><p>APL</p><h2 id="aplCount">0</h2></div>
+    <div class="card bpl-card"><p>BPL</p><h2 id="bplCount">0</h2></div>
+    <div class="card ant-card"><p>Antyodaya</p><h2 id="antCount">0</h2></div>
+  </section>
+
+  <div id="monthlyNotice" class="monthly-notice" style="display:none;"></div>
+
+  <form id="customerForm">
+    <input type="text" id="customerName" placeholder="Name" required>
+    <input type="text" id="rationNumber" placeholder="Ration Number" required>
+    <input type="text" id="phoneNumber" placeholder="Phone" required>
+
+    <select id="cardTypeSelect" required>
+      <option value="" disabled selected>Select Card Type</option>
+      <option value="APL">APL — Above Poverty Line</option>
+      <option value="BPL">BPL — Below Poverty Line</option>
+      <option value="Antyodaya">Antyodaya — Poorest of Poor</option>
+    </select>
+
+    <div id="rationInfo" class="ration-info" style="display:none;">
+      <strong>Auto Ration Quota:</strong> <span id="rationQuotaText"></span>
+    </div>
+
+    <label><input type="checkbox" value="Rice" class="productCheckbox"> Rice</label>
+    <label><input type="checkbox" value="Wheat" class="productCheckbox"> Wheat</label>
+    <label><input type="checkbox" value="Sugar" class="productCheckbox"> Sugar</label>
+    <label><input type="checkbox" value="Oil" class="productCheckbox"> Oil</label>
+    <label><input type="checkbox" value="Dal" class="productCheckbox"> Dal</label>
+    <label><input type="checkbox" value="Salt" class="productCheckbox"> Salt</label>
+
+    <input type="number" id="quantityInput" placeholder="Quantity (kg)" required>
+    <small id="maxQtyHint" style="color:#888;"></small>
+
+    <select id="statusSelect">
+      <option value="Received">Received</option>
+      <option value="Pending">Pending</option>
+    </select>
+
+    <button type="submit">Add</button>
+  </form>
+
+  <input type="text" id="searchInput" placeholder="Search by name or ration number">
+
+  <select id="filterCardType">
+    <option value="All">All Card Types</option>
+    <option value="APL">APL</option>
+    <option value="BPL">BPL</option>
+    <option value="Antyodaya">Antyodaya</option>
+  </select>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Ration No.</th>
+        <th>Phone</th>
+        <th>Card Type</th>
+        <th>Products</th>
+        <th>Qty</th>
+        <th>Status</th>
+        <th>Month</th>
+        <th>Time</th>
+        <th>Sync</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="customerTableBody"></tbody>
+  </table>
+
+</main>
+</div>
+
+<script src="dashboard.js" defer></script>
+</body>
+</html>
